@@ -14,11 +14,18 @@
     font-weight: bold;
 }
 
+:root {
+    --font: 'FivoSansModern-Regular','FivoSansModern-Bold';
+    --yale-blue: #00479e;
+    --yale-yellow: #ffe515;
+    --yale-red: #ed2d23;
+}
+
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family:'FivoSansModern-Regular','FivoSansModern-Bold';
+    font-family: var(--font);
 }
 
 body {
@@ -42,7 +49,7 @@ header a {
     gap: 25px;
     color: black;
     font-family: 'SpaceMono-Regular';
-    letter-spacing: -1px;
+    word-spacing: -8px;
 }
 
 nav {
@@ -73,7 +80,7 @@ main {
 #resources-nav,
 #other-nav {
     display: none;
-    background-color: #00479e;
+    background-color: var(--yale-blue);
     width: 90%;
     margin-bottom: 2%;
 }
@@ -121,11 +128,12 @@ button {
     border-radius: 0.25rem;
     padding: 10px;
     width: 9rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     color: white;
-    background-color: #00479e;
+    background-color: var(--yale-blue);
 }
 
 .video-insert {
@@ -138,15 +146,16 @@ button:hover {
     font-family: 'FivoSansModern-Bold';
     padding: 2%;
     margin-bottom: 1.5%;
+    margin-top: 1.5%;
 }
 
 .community {
     display: block;
-    background-color: #00479e35;
     border-bottom: 1px solid black;
+    background-color: rgba(128, 128, 128, 0.096);
 }
 
-.community p {
+.community-title {
     padding-top: 5rem;
     font-size: 2rem;
     text-align: center;
@@ -163,18 +172,39 @@ button:hover {
 }
 
 .community-flex section {
-    background-color: white;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: 35em;
     border-radius: 20px;
     margin-bottom: 5rem;
+    border: 2px solid black;
+    background-color: white;
+    /* background-color: rgba(128, 128, 128, 0.205); */
 }
 
-.community-flex section p {
+.quote-content {
     margin-left: 5%;
     font-size: 1rem;
     text-align: left;
+}
+
+.quote-one,
+.quote-two,
+.quote-three {
+    height: 25%;
+    font-size: 10rem;
+}
+
+.quote-one {
+    color: var(--yale-yellow);
+}
+
+.quote-two {
+    color: var(--yale-red);
+}
+
+.quote-three {
+    color: var(--yale-blue);
 }
 
 footer {
@@ -225,7 +255,7 @@ form {
 .footer-button {
     font-size: large;
     border: 1px solid;
-    color: #00479e;
+    color: var(--yale-blue);
     padding: 1%;
     text-align: center;
     
@@ -235,7 +265,7 @@ form {
     appearance: none;
     padding: 1%;
     border: none;
-    background-color: #00479e;
+    background-color: var(--yale-blue);
     color: white;
     cursor: pointer;
 }
@@ -254,11 +284,28 @@ form {
 .follow > a:visited,
 .link > a:link,
 .link > a:visited  {
-    color: #00479e;
+    color: var(--yale-blue);
 }
 
 .link {
     display: flex;
     flex-direction: column;
     gap: 7%;
+}
+
+.gallery {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 350px;
+    transition: transform 0.9s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
 }
