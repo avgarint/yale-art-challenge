@@ -1,0 +1,103 @@
+@font-face {
+    font-family: SpaceMono-Regular;
+    src: url(/font/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: FivoSansModern-Regular;
+    src: url(/font/FivoSansModern-Regular.otf);
+}
+
+@font-face {
+    font-family: FivoSansModern-Bold;
+    src: url(/font/FivoSansModern-Bold.otf);
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family:'FivoSansModern-Regular','FivoSansModern-Bold';
+}
+
+body {
+    width: 100%;
+}
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 2%;
+    margin: auto;
+    align-items: center;
+
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    padding: 2%;
+    margin: auto;
+    align-items: center;
+    
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1Px solid;
+    border-top: 1Px solid;
+
+}
+
+.img {
+    width: 20%;
+    padding: .75%;
+
+}
+
+.img > img {
+    width: 100%;
+
+}
+
+.content {
+    width: 80%;
+    padding: 1%;
+    border-left: 1px solid;
+}
+
+.content > h2,
+.content > p {
+
+    width: 90%;
+    text-align: left;
+    margin: 2%;
+    
+}
+
+.video-insert {
+    text-align: center;
+    padding: 2%;
+}
+
+.video-insert > p {
+
+    font-size: 150%;
+    font-family: 'FivoSansModern-Bold';
+    padding: 2%;
+}
+
+iframe {
+    padding: 2%;
+    border: 1% solid;
+}
