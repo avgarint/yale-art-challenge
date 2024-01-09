@@ -1,55 +1,112 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <title>Yale School of Art</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" id="meta-viewport">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <a href="index.html">
-                <img src="images/image1.jpg" alt="logo">
-            </a>
-            <h1>Yale School of Art</h1>
-            <button>log in</button>
-        </header>
-        <nav>
-            <a href="#">lien</a>
-            <a href="#">lien</a>
-            <a href="#">lien</a>
-            <a href="#">lien</a>
-            <a href="#">lien</a>
-        </nav>
-        <main>
+<html lang="en-EN" dir="ltr">
+  <head>
+    <title>Home - Yale School of Art</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Official website for the Yale Art School"
+    />
+    <meta name="author" content="Yale School dev team" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      id="meta-viewport"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          class="school-logo"
+          src="images/Yale_School_of_Art.png"
+          alt="Logo"
+        />
+        Yale School of Art
+      </a>
+      <!--<h1>Yale School of Art</h1>-->
+      <button class="login-button">Login</button>
+    </header>
+    <nav id="main-nav">
+      <a id="school" href="#">School</a>
+      <a id="project" href="#">Project</a>
+      <a id="study-areas" href="#">Study Areas</a>
+      <a id="resources" href="#">Resources</a>
+      <a id="other" href="#">Other</a>
+    </nav>
+    <nav id="school-nav">
+      <a href="#">About</a>
+      <a href="#">Faculty and Staff</a>
+      <a href="#">Alumni</a>
+      <a href="#">Friend of the school</a>
+    </nav>
+    <nav id="project-nav">
+      <a href="#">Exhibition</a>
+      <a href="#">Public Event</a>
+      <a href="#">Publication</a>
+    </nav>
+    <nav id="study-areas-nav">
+      <a href="#">Graphic Design</a>
+      <a href="#">Painting and Printmarking</a>
+      <a href="#">Photography</a>
+      <a href="#">Sculpture</a>
+      <a href="#">All-School/Interdisciplinary</a>
+      <a href="#">Critical Practice</a>
+    </nav>
+    <main>
+      <section class="about">
+        <img src="/images/u3C0MT1Z_400x400.jpeg" alt="image" />
+        <section class="about-content">
+          <p>
+            about
+            <span
+              >The Yale School of Art is a graduate school that confers MFAs in
+              Graphic Design, Painting/Printmaking, Photography, and Sculpture;
+              and offers undergraduate-level art courses to Yale College
+              students. Our website exists as an ongoing collaborative
+              experiment in digital publishing and information sharing. It
+              functions as a wiki—all members of the School of Art community
+              have the ability to add new, and edit most existing content.</span
+            >
+          </p>
+        </section>
+      </section>
 
-            <section>
-                <article class="img">
-                    <img src="/images/u3C0MT1Z_400x400.jpeg" alt="image">
-                </article>
-                <article class="content">
-                    <h2>about</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus modi voluptatem nostrum totam! Vel quidem, saepe eaque error itaque adipisci iusto dignissimos quibusdam ex quis, perspiciatis perferendis quam fugit!</p>
-                </article>
-            </section>
+      <section class="video-insert">
+        <p>2023 ADMISSIONS OPEN HOUSE VIDEOS ARE LIVE!</p>
+        <iframe
+          width="1000"
+          height="510"
+          src="https://www.youtube.com/embed/smn0Rx65Lzc?si=pZXVhS1lHQXvykhC"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
 
-            <div class="video-insert">
-                <p> 2023 ADMISSIONS OPEN HOUSE VIDEOS ARE LIVE !</p>
-                <iframe width="1000" height="510" src="https://www.youtube.com/embed/smn0Rx65Lzc?si=pZXVhS1lHQXvykhC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            <section>
-                <article class="img">
-                    <img src="/images/u3C0MT1Z_400x400.jpeg" alt="image">
-                </article>
-                <article class="content">
-                    <h2>about</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus modi voluptatem nostrum totam! Vel quidem, saepe eaque error itaque adipisci iusto dignissimos quibusdam ex quis, perspiciatis perferendis quam fugit!</p>
-                </article>
-            </section>
-
-        </main>
-    </body>
+      <section class="about">
+        <img src="/images/u3C0MT1Z_400x400.jpeg" alt="Image" />
+        <article class="about-content">
+          <p>
+            happening at SOA
+            <span
+              >Spring 2024 Visiting Artist lectures are happening primarily in
+              person, with some guests joining us online via Zoom. Attendance
+              for in-person lectures is limited to current members of the School
+              of Art community. This page serves as an archive of those
+              lectures, as well as the select clips and segments that may be
+              made available on the School of Art's YouTube channel in the
+              coming months, in collaboration with each guest. Internal
+              recordings of these lectures (with recording at the discretion of
+              each guest) are made available to School of Art students, faculty,
+              and staff via Dropbox.</span
+            >
+          </p>
+        </article>
+      </section>
+    </main>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>

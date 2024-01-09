@@ -26,14 +26,23 @@ body {
 }
 
 header {
-
     display: flex;
     justify-content: space-between;
     width: 90%;
     padding: 2%;
     margin: auto;
     align-items: center;
+}
 
+header a {
+    display: flex;
+    text-decoration: none;
+    font-size: 2rem;
+    align-items: center;
+    gap: 25px;
+    color: black;
+    font-family: 'SpaceMono-Regular';
+    letter-spacing: -1px;
 }
 
 nav {
@@ -44,45 +53,59 @@ nav {
     padding: 2%;
     margin: auto;
     align-items: center;
-    
+}
+
+nav a {
+    color: black;
 }
 
 main {
     width: 100%;
 }
 
-section {
+.school-logo {
+    width: 4rem;
+}
+
+#school-nav,
+#project-nav,
+#study-areas-nav {
+    display: none;
+}
+
+.about {
     display: flex;
     justify-content: space-around;
-    border-bottom: 1Px solid;
-    border-top: 1Px solid;
-
+    border-bottom: 1px solid;
+    border-top: 1px solid;
 }
 
-.img {
-    width: 20%;
-    padding: .75%;
-
+.about > img {
+    width: 25%;
+    padding: 2%;
 }
 
-.img > img {
-    width: 100%;
-
+.about-content {
+    padding: 5%;
+    border-left: 1px solid black;
 }
 
-.content {
-    width: 80%;
-    padding: 1%;
-    border-left: 1px solid;
+.about-content > p {
+    font-size: 2rem;
 }
 
-.content > h2,
-.content > p {
+.about-content > p > span {
+    font-size: 1rem;
+}
 
-    width: 90%;
-    text-align: left;
-    margin: 2%;
-    
+.login-button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 10px;
+    width: 7rem;
 }
 
 .video-insert {
@@ -91,7 +114,6 @@ section {
 }
 
 .video-insert > p {
-
     font-size: 150%;
     font-family: 'FivoSansModern-Bold';
     padding: 2%;
