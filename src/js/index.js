@@ -13,11 +13,11 @@ const navs = {
     },
     'resources': {
         'a': document.getElementById('resources'),
-        'nav': undefined
+        'nav': document.getElementById('resources-nav')
     },
     'other': {
         'a': document.getElementById('other'),
-        'nav': undefined
+        'nav': document.getElementById('other-nav')
     }
 };
 

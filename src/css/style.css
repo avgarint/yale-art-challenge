@@ -46,7 +46,7 @@ header a {
 }
 
 nav {
-
+    border: 1px solid black;
     display: flex;
     justify-content: space-around;
     width: 90%;
@@ -69,11 +69,25 @@ main {
 
 #school-nav,
 #project-nav,
-#study-areas-nav {
+#study-areas-nav,
+#resources-nav,
+#other-nav {
     display: none;
+    background-color: #00479e;
+    width: 90%;
+    margin-bottom: 2%;
+}
+
+#school-nav a,
+#project-nav a,
+#study-areas-nav a,
+#resources-nav a,
+#other-nav a {
+    color: white;
 }
 
 .about {
+    margin-top: 2%;
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid;
@@ -81,7 +95,8 @@ main {
 }
 
 .about > img {
-    width: 25%;
+    align-self: center;
+    height: 250px;
     padding: 2%;
 }
 
@@ -98,28 +113,152 @@ main {
     font-size: 1rem;
 }
 
-.login-button {
+button {
     cursor: pointer;
-    background-color: black;
-    color: white;
-    border: none;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
     border-radius: 0.25rem;
     padding: 10px;
-    width: 7rem;
+    width: 9rem;
+}
+
+button:hover {
+    color: white;
+    background-color: #00479e;
 }
 
 .video-insert {
     text-align: center;
-    padding: 2%;
+    margin-bottom: 3rem;
 }
 
 .video-insert > p {
     font-size: 150%;
     font-family: 'FivoSansModern-Bold';
     padding: 2%;
+    margin-bottom: 1.5%;
 }
 
-iframe {
-    padding: 2%;
-    border: 1% solid;
+.community {
+    display: block;
+    background-color: #00479e35;
+    border-bottom: 1px solid black;
+}
+
+.community p {
+    padding-top: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.community-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 80%;
+    margin: auto;
+}
+
+.community-flex section {
+    background-color: white;
+    width: 100%;
+    overflow-y: scroll;
+    height: 35em;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+}
+
+.community-flex section p {
+    margin-left: 5%;
+    font-size: 1rem;
+    text-align: left;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    margin-inline: 1%;
+}
+
+footer > section {
+    width: 25%;
+    padding-inline: 1%;
+    border-left: 1px solid;
+}
+
+.title {
+    font-family: 'FivoSansModern-Bold';
+    margin-bottom: 2%;
+}
+
+.follow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.follow > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
+}
+
+.bottom-school-logo {
+    width: 20%;
+    align-self: center;
+}
+
+.disclaimer {
+    font-size: small;
+    text-align: left;
+}
+
+form {
+   display: flex;
+   margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+.footer-button {
+    font-size: large;
+    border: 1px solid;
+    color: #00479e;
+    padding: 1%;
+    text-align: center;
+    
+}
+
+.footer-email {
+    appearance: none;
+    padding: 1%;
+    border: none;
+    background-color: #00479e;
+    color: white;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: white;
+}
+
+.contact {
+    border: none;
+}
+
+.contact > a:link,
+.contact > a:visited,
+.follow > a:link,
+.follow > a:visited,
+.link > a:link,
+.link > a:visited  {
+    color: #00479e;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
 }
