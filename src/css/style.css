@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
 @font-face {
     font-family: SpaceMono-Regular;
     src: url(/font/SpaceMono-Regular.ttf);
@@ -321,6 +323,7 @@ input[type="email"] {
 
 .gallery-text p {
     font-size: 4rem;
+    font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
