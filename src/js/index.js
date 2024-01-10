@@ -34,12 +34,18 @@ function initNavBar() {
         a.addEventListener('mouseover', () => {
             hideAllNavbars();
             if (nav) {
+                const mainNav = document.getElementById('main-nav');
+                mainNav.classList.toggle('main-nav-sub-nav-open');
+                mainNav.style.borderRadius = '0.25rem 0.25rem 0px 0px';
                 nav.style.display = 'flex';
+                nav.style.borderRadius = '0px 0px 0.25rem 0.25rem';
             }
         });
 
         if (nav) {
             nav.addEventListener('mouseleave', () => {
+                const mainNav = document.getElementById('main-nav');
+                mainNav.style.borderRadius = '0.25rem';
                 hideAllNavbars();
             });
         }
