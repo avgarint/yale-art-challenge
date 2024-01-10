@@ -44,6 +44,42 @@ header {
     align-items: center;
 }
 
+.highlight-container, .highlight {
+    position: relative;
+}
+
+.highlight-container {
+    display: inline-block;
+}
+
+.highlight-container:before {
+    content: " ";
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    opacity: 0.3;
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+}
+
+.highlight-container:nth-child(1):before {
+    background: var(--yale-yellow);
+}
+
+.highlight-container:nth-child(2):before {
+    background: var(--yale-red);
+}
+
+.highlight-container:nth-child(3):before {
+    background: var(--yale-blue);
+}
+
 header a {
     display: flex;
     text-decoration: none;
@@ -73,7 +109,8 @@ header a img {
     justify-content: center;
 }
 
-.header-button:hover {
+.header-button:hover,
+.add-button:hover {
     color: white;
     background-color: var(--yale-blue);
 }
@@ -171,6 +208,11 @@ main {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 3rem;
+    text-decoration-style: wavy;
+    text-underline-offset: 0.45rem;
+    text-decoration-color: var(--yale-red);
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.16rem;
 }
 
 .community-flex {
@@ -223,6 +265,7 @@ main {
 .quote-three {
     height: 25%;
     font-size: 10rem;
+    margin-left: 10%;
 }
 
 .quote-one {
@@ -299,10 +342,10 @@ input[type="email"] {
 }
 
 .footer-button {
-    font-size: large;
+    font-size: small;
     border: 1px solid;
     color: var(--yale-blue);
-    padding: 1%;
+    padding: 2%;
     text-align: center;
 }
 
@@ -312,7 +355,6 @@ input[type="email"] {
     border: none;
     background-color: var(--yale-blue);
     color: white;
-    cursor: pointer;
 }
 
 ::placeholder {
@@ -324,12 +366,7 @@ input[type="email"] {
     border: none;
 }
 
-.contact > a:link,
-.contact > a:visited,
-.follow > a:link,
-.follow > a:visited,
-.link > a:link,
-.link > a:visited  {
+footer a:visited  {
     color: var(--yale-blue);
 }
 
