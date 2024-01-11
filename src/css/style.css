@@ -284,6 +284,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 1%;
+    margin-top: 3rem;
     margin-inline: 1%;
 }
 
@@ -370,25 +371,40 @@ footer a:visited  {
     color: var(--yale-blue);
 }
 
-.gallery-arts {
-    width: 100%;
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.gallery img {
-    width: 350px;
-    transition: transform 0.9s;
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
+.gallery {
+    margin-bottom: 6rem;
 }
 
 .gallery-text {
     margin-top: 3rem;
+}
+
+.gallery-art-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-art-images-scroll {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: 100%;
+    display: flex;
+    animation: scrolling 16s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {transform: translateX(0vw);}
+    100% {transform: translateX(-100vw);}
+}
+
+.gallery-art-images-scroll img {
+    width: calc(100vw / 4);
+    flex-shrink: 0;
+}
+
+.gallery-art-images-scroll img:hover {
+    transform: scale(1.1);
 }
 
 .gallery-text p {
@@ -401,7 +417,6 @@ footer a:visited  {
     background-image: url(https://secure.its.yale.edu/cas/images/yale-background.png);
     display: flex;
     justify-content: center;
-    margin: 5rem auto 3rem auto;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 4rem;
