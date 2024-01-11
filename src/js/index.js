@@ -87,3 +87,11 @@ const button = document.getElementById("add-note");
 button.addEventListener("click", addNote);
 
 initNavBar();
+
+const burger = document.getElementById('mobile-burger');
+const mainNav = document.getElementById("main-nav");
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('mobile-burger-transition');
+  mainNav.classList.toggle('main-nav-mobile');
+});
