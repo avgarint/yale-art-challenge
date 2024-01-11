@@ -164,6 +164,7 @@ main {
     align-items: center;
     border-bottom: 1px solid;
     border-top: 1px solid;
+    margin-top: 5%;
 }
 
 .about img {
