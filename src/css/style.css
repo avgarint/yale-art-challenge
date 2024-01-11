@@ -561,4 +561,10 @@ footer a:visited  {
     .add-button-container {
         display: none;
     }
+    
+    .about img {
+        padding: 0%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
 }
