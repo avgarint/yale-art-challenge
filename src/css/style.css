@@ -465,12 +465,18 @@ footer a:visited  {
         width: 100%;
     }
     
-    .gallery-art-images-scroll img {
-        width: calc(100vw / 1);
-    }
-
     .gallery-art-images-scroll {
         animation: scrolling 5s linear infinite;
+    }
+
+    @keyframes scrolling {
+        0% {transform: translateX(0vw);}
+        100% {transform: translateX(-200vw);}
+    }
+    
+    .gallery-art-images-scroll img {
+        width: calc(100% / 2);
+        flex-shrink: 0;
     }
 
     .community-flex {
