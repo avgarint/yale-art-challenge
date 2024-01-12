@@ -21,6 +21,8 @@ const navs = {
   },
 };
 
+let counter = 0;
+
 function hideAllNavbars() {
   for (const { nav } of Object.values(navs)) {
     if (nav) {
@@ -92,7 +94,13 @@ const mainNav = document.getElementById("main-nav");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("mobile-burger-transition");
-  mainNav.classList.toggle("main-nav-mobile");
+
+  if (burger.classList.contains("mobile-burger-transition")) {
+    mainNav.style.display = "flex";
+  } else {
+    mainNav.style.display = "none";
+    hideAllNavbars();
+  }
 });
 
 initNavBar();
