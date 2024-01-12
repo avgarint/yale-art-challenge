@@ -227,12 +227,13 @@ main {
 }
 
 .community-flex section {
-    width: 250px;
-    height: 30em;
-    position:relative;
-    background :#ffa;
+    min-width: 15%;
+    max-width: 15%;
+    height: 20em;
+    position: relative;
+    background: #ffa;
     overflow: hidden;
-    margin: 30px auto;
+    margin: 30px 2%;
     padding: 20px;
     border-radius: 0 0 0 30px/45px;
     box-shadow:
@@ -243,7 +244,7 @@ main {
     font-size: 19px;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
-    color:#130d6b;
+    transform: rotateZ(-1deg);
 }
 
 .add-button {
@@ -265,9 +266,9 @@ main {
 
 .quote-content {
     margin-left: 5%;
-    width: 90%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: left;
+    line-height: 0.8rem;
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -497,9 +498,11 @@ footer a:visited  {
     }
 
     .community-flex section {
-        width: 80%;
         height: fit-content;
         max-height: 20em;
+        width: 80%;
+        min-width: unset;
+        max-width: unset;
     }
 
     .quote-one, .quote-two, .quote-three {
@@ -526,7 +529,7 @@ footer a:visited  {
 
     iframe {
         max-width: 100vw;
-        max-height: 40vh;
+        max-height: 25vh;
     }
 
     header a {
