@@ -1,106 +1,115 @@
 const navs = {
-  school: {
-    a: document.getElementById("school"),
-    nav: document.getElementById("school-nav"),
-  },
-  project: {
-    a: document.getElementById("project"),
-    nav: document.getElementById("project-nav"),
-  },
-  studyAreas: {
-    a: document.getElementById("study-areas"),
-    nav: document.getElementById("study-areas-nav"),
-  },
-  resources: {
-    a: document.getElementById("resources"),
-    nav: document.getElementById("resources-nav"),
-  },
-  other: {
-    a: document.getElementById("other"),
-    nav: document.getElementById("other-nav"),
-  },
+    school: {
+        a: document.getElementById("school"),
+        nav: document.getElementById("school-nav"),
+    },
+    project: {
+        a: document.getElementById("project"),
+        nav: document.getElementById("project-nav"),
+    },
+    studyAreas: {
+        a: document.getElementById("study-areas"),
+        nav: document.getElementById("study-areas-nav"),
+    },
+    resources: {
+        a: document.getElementById("resources"),
+        nav: document.getElementById("resources-nav"),
+    },
+    other: {
+        a: document.getElementById("other"),
+        nav: document.getElementById("other-nav"),
+    },
 };
+
+const mainNav = document.getElementById("main-nav");
+const sectionNote = document.getElementById("section-note");
+const burger = document.getElementById("mobile-burger");
+const button = document.getElementById("add-note");
 
 let counter = 0;
 
+/**
+ * Hide all sub-navigation bars
+ */
 function hideAllNavbars() {
-  for (const { nav } of Object.values(navs)) {
-    if (nav) {
-      nav.style.display = "none";
-    }
-  }
-}
-
-function displayNavbar(nav) {
-  if (nav) {
-    const mainNav = document.getElementById("main-nav");
-    mainNav.classList.toggle("main-nav-sub-nav-open");
-    mainNav.style.borderRadius = "0.25rem 0.25rem 0px 0px";
-    nav.style.display = "flex";
-    nav.style.borderRadius = "0px 0px 0.25rem 0.25rem";
-  }
-}
-
-function initNavBar() {
-  for (const { a, nav } of Object.values(navs)) {
-    a.addEventListener("mouseover", () => {
-      hideAllNavbars();
-      displayNavbar(nav);
+    Object.values(navs).forEach(({ nav }) => {
+        nav?.style.setProperty("display", "none");
     });
-
-    if (nav) {
-      nav.addEventListener("mouseleave", () => {
-        const mainNav = document.getElementById("main-nav");
-        mainNav.style.borderRadius = "0.25rem";
-        hideAllNavbars();
-      });
-    }
-  }
 }
 
+/**
+ * Display the selected sub-navigation bar
+ * @param {HTMLElement} nav
+ */
+function displayNavbar(nav) {
+    if (!nav) return;
+
+    mainNav?.classList.add("main-nav-sub-nav-open");
+    mainNav?.style.setProperty("border-radius", "0.25rem 0.25rem 0 0");
+
+    nav.style.setProperty("display", "flex");
+    nav.style.setProperty("border-radius", "0 0 0.25rem 0.25rem");
+}
+
+/**
+ * Initialize navigation bar functionality
+ */
+function initNavBar() {
+    Object.values(navs).forEach(({ a, nav }) => {
+        a?.addEventListener("mouseenter", () => {
+            hideAllNavbars();
+            displayNavbar(nav);
+        });
+
+        nav?.addEventListener("mouseleave", () => {
+            mainNav?.style.setProperty("border-radius", "0.25rem");
+            hideAllNavbars();
+        });
+    });
+}
+
+/**
+ * Add a new note to the document
+ */
 function addNote() {
-  const newNote = document.createElement("section");
-  const quoteDiv = document.createElement("p");
-  const paraDiv = document.createElement("p");
-  const choices = ["quote-three", "quote-two", "quote-one"];
-  const choice = choices[counter];
-  counter = (counter + 1) % choices.length;
-  const newContent = document.createTextNode("❝");
+    const noteContent = prompt("Write your note");
 
-  const noteContent = prompt("Write your note");
+    if (!noteContent?.trim()) return;
 
-  if (noteContent === null || noteContent.trim() === "") {
-    return;
-  }
+    const newNote = document.createElement("section");
+    const quoteDiv = document.createElement("p");
+    const paraDiv = document.createElement("p");
+    const choices = ["quote-three", "quote-two", "quote-one"];
+    const choice = choices[counter];
 
-  newNote.appendChild(quoteDiv);
-  newNote.appendChild(paraDiv);
+    counter = (counter + 1) % choices.length;
 
-  quoteDiv.appendChild(newContent);
-  quoteDiv.classList.add(choice);
+    quoteDiv.classList.add(choice);
+    quoteDiv.textContent = "❝";
 
-  paraDiv.classList.add("quote-content");
-  paraDiv.appendChild(document.createTextNode(noteContent));
+    paraDiv.classList.add("quote-content");
+    paraDiv.textContent = noteContent;
 
-  const currentDiv = document.getElementById("section-note");
-  currentDiv.insertAdjacentElement("afterbegin", newNote);
+    newNote.append(quoteDiv, paraDiv);
+
+    sectionNote?.insertAdjacentElement("afterbegin", newNote);
 }
 
-const button = document.getElementById("add-note");
-button.addEventListener("click", addNote);
+/**
+ * Toggle the mobile menu
+ */
+function toggleMobileMenu() {
+    burger?.classList.toggle("mobile-burger-transition");
 
-const burger = document.getElementById("mobile-burger");
-const mainNav = document.getElementById("main-nav");
+    const isOpen = burger?.classList.contains("mobile-burger-transition");
+    mainNav?.style.setProperty("display", isOpen ? "flex" : "none");
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("mobile-burger-transition");
+    if (!isOpen) hideAllNavbars();
+}
 
-  if (burger.classList.contains("mobile-burger-transition")) {
-    mainNav.style.display = "flex";
-  } else {
-    mainNav.style.display = "none";
-    hideAllNavbars();
-  }
-});
+// Event Listeners
+button?.addEventListener("click", addNote);
+burger?.addEventListener("click", toggleMobileMenu);
 
+// Initialize nav bar on page load
 initNavBar();

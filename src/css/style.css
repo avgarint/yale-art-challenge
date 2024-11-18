@@ -3,17 +3,17 @@
 
 @font-face {
     font-family: SpaceMono-Regular;
-    src: url(/font/SpaceMono-Regular.ttf);
+    src: url(/fonts/SpaceMono-Regular.ttf);
 }
 
 @font-face {
     font-family: FivoSansModern-Regular;
-    src: url(/font/FivoSansModern-Regular.otf);
+    src: url(/fonts/FivoSansModern-Regular.otf);
 }
 
 @font-face {
     font-family: FivoSansModern-Bold;
-    src: url(/font/FivoSansModern-Bold.otf);
+    src: url(/fonts/FivoSansModern-Bold.otf);
     font-weight: bold;
 }
 
@@ -468,120 +468,4 @@ footer a:visited  {
 
 .mobile-burger-transition {
     transform: rotateZ(90deg);
-}
-
-@media screen and (max-width: 600px) {
-    .calendar article {
-        width: 100%;
-    }
-    
-    .gallery-art-images-scroll {
-        animation: scrolling 5s linear infinite;
-    }
-
-    @keyframes scrolling {
-        0% {transform: translateX(0vw);}
-        100% {transform: translateX(-200vw);}
-    }
-    
-    .gallery-art-images-scroll img {
-        width: calc(100% / 2);
-        flex-shrink: 0;
-    }
-
-    .community-flex {
-        flex-direction: column;
-    }
-
-    .community-title {
-        font-size: 1.8rem;
-    }
-
-    .community-flex section {
-        height: fit-content;
-        max-height: 20em;
-        width: 80%;
-        min-width: unset;
-        max-width: unset;
-    }
-
-    .quote-one, .quote-two, .quote-three {
-        font-size: 4rem;
-    }
-
-    .about {
-        flex-direction: column;
-    }
-
-    .about img {
-        width: 100%;
-    }
-
-    .highlight-container:before {
-        height: 50%;
-        width: 90%;
-    }
-
-    .about-content {
-        border: none;
-        line-height: 1.4rem;
-    }
-
-    iframe {
-        max-width: 100vw;
-        max-height: 25vh;
-    }
-
-    header a {
-        font-size: 1.4rem;
-        gap: 1.5rem;
-    }
-
-    header a img {
-        width: 3rem;
-    }
-
-    .login-button {
-        display: none;
-    }
-
-    .mobile-burger {
-        display: flex;
-    }
-    
-    nav {
-        flex-direction: column;
-    }
-
-    #main-nav {
-        display: none;
-    }
-
-    .gallery-text p {
-        font-size: 2.2rem;
-    }
-
-    footer {
-        flex-direction: column;
-    }
-
-    footer section {
-        width: 100%;
-        margin-bottom: 1.4rem;
-        border-left: none;
-    }
-
-    .title {
-        margin-bottom: 0.2rem;
-    }
-    
-    .add-button-container {
-        display: none;
-    }
-    
-    .about img {
-        padding: 0%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
 }
