@@ -18,7 +18,7 @@
 }
 
 :root {
-    --font: 'FivoSansModern-Regular','FivoSansModern-Bold';
+    --font: 'FivoSansModern-Regular', 'FivoSansModern-Bold';
     --yale-blue: #00479e;
     --yale-yellow: #ffe515;
     --yale-red: #ed2d23;
@@ -45,7 +45,8 @@ header {
     align-items: center;
 }
 
-.highlight-container, .highlight {
+.highlight-container,
+.highlight {
     position: relative;
 }
 
@@ -179,11 +180,11 @@ main {
     border-left: 1px solid black;
 }
 
-.about-content > p {
+.about-content>p {
     font-size: 2rem;
 }
 
-.about-content > p > span {
+.about-content>p>span {
     font-size: 1rem;
 }
 
@@ -192,7 +193,7 @@ main {
     margin-bottom: 3rem;
 }
 
-.video-insert > p {
+.video-insert>p {
     font-size: 150%;
     font-family: 'FivoSansModern-Bold';
     padding: 2%;
@@ -237,9 +238,9 @@ main {
     padding: 20px;
     border-radius: 0 0 0 30px/45px;
     box-shadow:
-        inset 0 -40px 40px rgba(0,0,0,0.2),
-        inset 0 25px 10px rgba(0,0,0,0.2),
-        0 5px 6px 5px rgba(0,0,0,0.2);
+        inset 0 -40px 40px rgba(0, 0, 0, 0.2),
+        inset 0 25px 10px rgba(0, 0, 0, 0.2),
+        0 5px 6px 5px rgba(0, 0, 0, 0.2);
     line-height: 1.7em;
     font-size: 19px;
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
@@ -272,7 +273,7 @@ main {
     font-family: 'Permanent Marker', cursive;
 }
 
-.quote-content > span {
+.quote-content>span {
     color: var(--yale-yellow);
     font-family: 'FivoSansModern-Bold';
 }
@@ -303,12 +304,12 @@ footer {
     margin-inline: 1%;
 }
 
-.mobile-burger {
+#mobile-burger {
     display: none;
     font-size: 1.6rem;
 }
 
-footer > section {
+footer>section {
     width: 25%;
     padding-inline: 1%;
     border-left: 1px solid;
@@ -353,8 +354,8 @@ footer > section {
 }
 
 form {
-   display: flex;
-   margin-bottom: 5%;
+    display: flex;
+    margin-bottom: 5%;
 }
 
 /* #email */
@@ -389,7 +390,7 @@ input[type="email"] {
     border: none;
 }
 
-footer a:visited  {
+footer a:visited {
     color: var(--yale-blue);
 }
 
@@ -417,8 +418,13 @@ footer a:visited  {
 }
 
 @keyframes scrolling {
-    0% {transform: translateX(0vw);}
-    100% {transform: translateX(-100vw);}
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+    }
 }
 
 .gallery-art-images-scroll img {

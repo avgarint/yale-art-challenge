@@ -2,16 +2,21 @@
     .calendar article {
         width: 100%;
     }
-    
+
     .gallery-art-images-scroll {
         animation: scrolling 5s linear infinite;
     }
 
     @keyframes scrolling {
-        0% {transform: translateX(0vw);}
-        100% {transform: translateX(-200vw);}
+        0% {
+            transform: translateX(0vw);
+        }
+
+        100% {
+            transform: translateX(-200vw);
+        }
     }
-    
+
     .gallery-art-images-scroll img {
         width: calc(100% / 2);
         flex-shrink: 0;
@@ -33,7 +38,9 @@
         max-width: unset;
     }
 
-    .quote-one, .quote-two, .quote-three {
+    .quote-one,
+    .quote-two,
+    .quote-three {
         font-size: 4rem;
     }
 
@@ -73,10 +80,10 @@
         display: none;
     }
 
-    .mobile-burger {
+    #mobile-burger {
         display: flex;
     }
-    
+
     nav {
         flex-direction: column;
     }
@@ -102,11 +109,11 @@
     .title {
         margin-bottom: 0.2rem;
     }
-    
+
     .add-button-container {
         display: none;
     }
-    
+
     .about img {
         padding: 0%;
         padding-top: 2%;
