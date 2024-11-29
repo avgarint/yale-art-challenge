@@ -1,6 +1,5 @@
 # yale-art-challenge
-
-Redesign of the art section website of the Yale University.
+Redesign of the Yale Art University website.
 
 | Full screen | Mobile |
 | :---:   | :---: |
